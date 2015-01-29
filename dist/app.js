@@ -14,10 +14,15 @@ System.register(["aurelia-router"], function (_export) {
 
       App = (function () {
         function App(router) {
+          this.navigation = [{ href: "#/hot", title: "Hot" }, { href: "#/new", title: "New" }, { href: "#/rising", title: "Rising" }, { href: "#/controversial", title: "Controversial" }, { href: "#/top", title: "Top" }, { href: "#/gilded", title: "Gilded" }, { href: "#/wiki", title: "Wiki" }, { href: "#/promoted", title: "Promoted" }];
+
           this.router = router;
           this.router.configure(function (config) {
-            config.title = "Aurelia";
-            config.map([{ route: ["", "welcome"], moduleId: "welcome", nav: true, title: "Welcome" }, { route: "flickr", moduleId: "flickr", nav: true }, { route: "child-router", moduleId: "child-router", nav: true, title: "Child Router" }]);
+            config.title = "Reddit";
+            config.map([{ route: ["/:type"], moduleId: "listing" }]).mapUnknownRoutes(function (instruction) {
+              instruction.config.moduleId = "listing";
+              console.log("instruction", instruction);
+            });
           });
         }
 

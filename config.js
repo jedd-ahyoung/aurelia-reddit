@@ -11,6 +11,7 @@ System.config({
   "map": {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.9.2",
     "aurelia-http-client": "github:aurelia/http-client@0.4.3",
+    "aurelia-path": "github:aurelia/path@0.4.1",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
     "font-awesome": "npm:font-awesome@4.2.0",
     "github:aurelia/binding@0.3.2": {

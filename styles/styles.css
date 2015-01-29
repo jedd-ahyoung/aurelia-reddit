@@ -4,11 +4,8 @@
 }
 
 .splash .message {
-    font-size: 5em;
+    font-size: 3em;
     line-height: 1.5em;
-    -webkit-text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
-    text-transform: uppercase;
 }
 
 .splash .fa-spinner {
@@ -38,4 +35,51 @@ section {
 
 .pictureDetail {
     max-width: 425px;
+}
+
+
+/* Listing styles */
+
+.listitem {
+    margin: 5px;
+    padding: 0;
+    background: #eee;
+    min-height: 100px;
+    position: relative;
+}
+
+.listitem:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    content: '';
+    background: attr(data-thumbnail url);
+}
+
+.listitem .score {
+    display: inline-block;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.listitem .title {
+    font-size: 1.8em;
+}
+
+.listitem .thumbnail {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    outline: 1px solid blue;
+}
+
+.listitem .iteminfo {
+    display: inline-block;
+    outline: 1px solid red;
+    margin: 0 0 0 -100px;
+    padding: 0 0 0 120px;
+    max-width: 99%;
 }

@@ -1,7 +1,7 @@
 System.register(["aurelia-framework"], function (_export) {
   "use strict";
 
-  var Behavior, _prototypeProperties, NavBar;
+  var Behavior, _prototypeProperties, ListItem;
   return {
     setters: [function (_aureliaFramework) {
       Behavior = _aureliaFramework.Behavior;
@@ -12,13 +12,13 @@ System.register(["aurelia-framework"], function (_export) {
         if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
       };
 
-      NavBar = (function () {
-        function NavBar() {}
+      ListItem = (function () {
+        function ListItem() {}
 
-        _prototypeProperties(NavBar, {
+        _prototypeProperties(ListItem, {
           metadata: {
             value: function metadata() {
-              return Behavior.withProperty("router").withProperty("navigation");
+              return Behavior.withProperty("listing");
             },
             writable: true,
             enumerable: true,
@@ -26,9 +26,9 @@ System.register(["aurelia-framework"], function (_export) {
           }
         });
 
-        return NavBar;
+        return ListItem;
       })();
-      _export("NavBar", NavBar);
+      _export("ListItem", ListItem);
     }
   };
 });

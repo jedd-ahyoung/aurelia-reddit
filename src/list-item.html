@@ -1,0 +1,16 @@
+<template>
+	<div class="row" id.bind="listing.data.id" data-score.bind="listing.data.score" data-thumbnail.bind="listing.data.thumbnail">
+		<div class="col-md-1">
+			${listing.data.score}
+		</div>
+		<img class="col-md-1" src.bind="listing.data.thumbnail" />
+		<div class="col-md-10">
+			<h2 class="title">
+				<a href.bind="listing.data.url">${listing.data.title}</a>
+			</h2>
+			<span class="submitted">Submitted at ${listing.data.created} by ${listing.data.author}$ to <a href="#/r/listing.data.subreddit">/r/${listing.data.subreddit}</a></span>
+			<br />
+			<a href="listing.data.permalink">${listing.data.num_comments} Comments</a>
+		</div>
+	</div>
+</template>

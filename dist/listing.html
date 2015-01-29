@@ -1,0 +1,9 @@
+<template>
+	<import from='./list-item'></import>
+
+	<ul class="container-fluid list-unstyled">
+		<li repeat.for="listing of listings">
+			<list-item listing.bind="listing"></list-item>
+		</li>
+	</ul>
+</template>
